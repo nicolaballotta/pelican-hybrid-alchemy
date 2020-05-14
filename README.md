@@ -10,13 +10,13 @@ This theme is based on [pelican-alchemy](https://github.com/nairobilug/pelican-a
 Clone the repo:
 
 ```bash
-git clone https://github.com/nairobilug/pelican-alchemy
+git clone https://github.com/nicolaballotta/pelican-hybrid-alchemy
 ```
 
 Set the `THEME` variable in your Pelican config:
 
 ```python
-THEME = '<PATH_TO_REPO>/alchemy'
+THEME = '<PATH_TO_REPO>'
 ```
 
 ### As a Submodule
@@ -25,11 +25,11 @@ In your Pelican site:
 
 ```bash
 mkdir themes
-git submodule add https://github.com/nairobilug/pelican-alchemy themes/pelican-alchemy
+git submodule add https://github.com/nicolaballotta/pelican-hybrid-alchemy themes/pelican-hybrid-alchemy
 ```
 
 And in Pelican config:
 
 ```python
-THEME = 'themes/pelican-alchemy/alchemy'
+THEME = 'themes/pelican-hybrid-alchemy'
 ```
