@@ -1,0 +1,296 @@
+::selection {
+  background: #2b3a47;
+  color: #fff;
+  text-shadow: none;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.7;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #2b3a47;
+}
+
+a:focus,
+a:hover {
+  color: #353535e8;
+  text-decoration: none;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+hr {
+  margin: 1.5rem 0;
+}
+
+h1 {
+  font-weight: 700;
+  color: #2b3a47;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2b3a47;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.container {
+  max-width: 960px;
+}
+
+.header,
+.footer {
+  padding: 1.5rem 0 .5rem;
+}
+
+.header {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.header a {
+  color: #ffffff
+}
+
+.header img {
+  margin-bottom: 1rem;
+}
+
+.header .title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.header ul,
+.header li {
+  margin-bottom: .5rem;
+}
+
+.header ul {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+.content {
+  font-weight: 400;
+  font-size: 20px;
+  color: #52606d;
+}
+
+.content img {
+  border-radius: 4px;
+  margin: 25px 0;
+}
+
+.main {
+  background-color: #fff;
+  padding: 1.5rem 0;
+}
+
+.footer {
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.footer a {
+  color: #ffffff
+}
+
+.highlight pre {
+  border: 1px solid rgba(0,0,0,.1);
+  padding: 1rem;
+}
+
+.pagination .page-link {
+  color: #333;
+}
+
+.teaser header ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.teaser header li {
+  margin-bottom: .5rem;
+}
+
+.teaser .content p {
+  margin-bottom: 0;
+}
+
+.article header ul,
+.article header li {
+  margin-bottom: .5rem;
+}
+
+.article header li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.fa {
+  color: #6c757d
+}
+
+.article .content a {
+  text-decoration: underline
+}
+
+@media (min-width: 576px) {
+  .header .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header,
+  .footer {
+    text-align: center;
+  }
+
+  .teaser header li {
+    display: inline-block;
+  }
+
+  .teaser header li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+/* ==========================================================================
+#CONTACT PAGE
+========================================================================== */
+/* an adaptation of http://tympanus.net/codrops/2015/01/08/inspiration-text-input-effects/ */
+
+#contactform, .form {
+    margin-top: 2rem;
+}
+.field {
+    border: none;
+    position: relative;
+    z-index: 1;
+    margin: 0 1em 0 0;
+    /* this is almost a third, on my own site I use calc(33% - 0.66rem) for width */
+    width: 50%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.field:nth-child(3) {
+    margin-right: 0;
+}
+.input {
+    position: relative;
+    display: block;
+    float: right;
+    border-radius: 0;
+    -webkit-appearance: none; /* for box shadows to show on iOS */
+    width: 100%;
+    background: transparent;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    z-index: 100;
+    height: 2rem;
+    border: 1px solid #333;
+}
+
+textarea.input {
+    resize: none;
+    padding-bottom: 0;
+    height: 10em
+}
+
+.input:focus {
+    outline: none;
+}
+
+.label {
+    display: inline-block;
+    float: right;
+    color: hsl(0, 0%, 20%);
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    text-align: left;
+    padding: 0.5em 0;
+    pointer-events: none;
+    font-size: 1em;
+}
+.label::before,
+.label::after {
+    content: '';
+    width: 100%;
+    left: 0;
+}
+.label::before {
+    height: 100%;
+    background: #fff;
+    top: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+.label::after {
+    height: 2px;
+    background-color: hsl(0, 0%, 20%);
+    top: 100%;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.label-content {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transition: -webkit-transform 0.3s, color 0.3s;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.button, input[type=submit] {
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5em;
+    color: #fff;
+    background-color: hsl(0, 0%, 20%);
+    transition: all 0.3s ease-out;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.18),0 2px 10px 0 rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.18),0 2px 10px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.18),0 2px 10px 0 rgba(0,0,0,0.15);
+}
+.button:hover, .button:focus, .button:active {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.23),0 4px 15px 0 rgba(0,0,0,0.20);
+    -moz-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.23),0 4px 15px 0 rgba(0,0,0,0.20);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.23),0 4px 15px 0 rgba(0,0,0,0.20);
+}
